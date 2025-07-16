@@ -1,3 +1,4 @@
+/*COUNTER*/
 document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter")
     .then((res) => res.json())
@@ -10,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .querySelectorAll(".akviz-counter-mobile")
         .forEach((el, i) => (el.textContent = str[i]));
 
-      // popuni desktop
+
       document
         .querySelectorAll(".akviz-counter-desk")
         .forEach((el, i) => (el.textContent = str[i]));
@@ -18,27 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((err) => console.error(err));
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter")
-    .then((res) => res.json())
-    .then((data) => {
-      // izvuci broj igrača i pretvori u string
-      const countStr = String(data.players || 0);
-      // dohvatimo sve boxeve
-      const boxes = document.querySelectorAll(
-        "#akvizicijaCounters .akviz-counter"
-      );
-      // ako broj ima manje cifara od boxeva, dopuni s leva nulama
-      const digits = countStr.padStart(boxes.length, "0").split("");
-      // popuni svaki box odgovarajućom cifrom
-      boxes.forEach((box, i) => {
-        box.textContent = digits[i];
-      });
-    })
-    .catch((err) => {
-      console.error("Greška pri učitavanju akvizicija countera:", err);
-    });
-});
+/*WINNERS SLIDER & DATA*/
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.getElementById("winnersGrid");
 
@@ -64,55 +45,41 @@ document.addEventListener("DOMContentLoaded", () => {
         wrapper.appendChild(slide);
       });
 
-      function applyBlur() {
-        swiper.slides.forEach((s) => s.classList.remove("blur-slide"));
-
-        const visible = Array.from(swiper.slides).filter((s) =>
-          s.classList.contains("swiper-slide-visible")
-        );
-
-        if (visible.length) {
-          visible[visible.length - 1].classList.add("blur-slide");
-        }
-      }
-
-      const swiper = new Swiper(".swiper-container", {
+      new Swiper(".swiper-container", {
         slidesPerView: 1,
         spaceBetween: 15,
-        rewind: true,
-        resistanceRatio: 0,
         grabCursor: true,
+        rewind: true, // ← аутоматски враћа на први slide
         watchSlidesVisibility: true,
-        breakpoints: { 768: { slidesPerView: 4 } },
-        on: {
-          init: applyBlur,
-          slideChangeTransitionEnd: applyBlur,
+        breakpoints: {
+          768: { slidesPerView: 4 },
         },
       });
     })
     .catch(console.error);
 });
+
 /*footer slider*/
 
-   function autoSlide(sliderContainer) {
-        const wrapper = sliderContainer.querySelector(".slider-wrapper");
-        const slides = sliderContainer.querySelectorAll(".slider-slide");
-        const slideWidth = slides[0].offsetWidth;
-        let currentPosition = 0;
+function autoSlide(sliderContainer) {
+  const wrapper = sliderContainer.querySelector(".slider-wrapper");
+  const slides = sliderContainer.querySelectorAll(".slider-slide");
+  const slideWidth = slides[0].offsetWidth;
+  let currentPosition = 0;
 
-        function moveSlides() {
-          currentPosition -= 1;
-          wrapper.style.transform = `translateX(${currentPosition}px)`;
+  function moveSlides() {
+    currentPosition -= 1;
+    wrapper.style.transform = `translateX(${currentPosition}px)`;
 
-          if (Math.abs(currentPosition) >= slideWidth) {
-            currentPosition = 0;
-            wrapper.style.transition = "none";
-            wrapper.appendChild(wrapper.firstElementChild);
-            wrapper.style.transform = `translateX(${currentPosition}px)`;
-          }
-        }
+    if (Math.abs(currentPosition) >= slideWidth) {
+      currentPosition = 0;
+      wrapper.style.transition = "none";
+      wrapper.appendChild(wrapper.firstElementChild);
+      wrapper.style.transform = `translateX(${currentPosition}px)`;
+    }
+  }
 
-        setInterval(moveSlides, 30);
-      }
-      const sliderContainers = document.querySelectorAll(".slider-container");
-      sliderContainers.forEach(autoSlide);
+  setInterval(moveSlides, 30);
+}
+const sliderContainers = document.querySelectorAll(".slider-container");
+sliderContainers.forEach(autoSlide);
