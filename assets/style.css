@@ -231,18 +231,17 @@
   height: 30px;
 }
 
-
-
 .font-gothic {
   font-family: "GothicCGNo1", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 48px;
-  line-height: 50px;
+  line-height: 1;
   vertical-align: middle;
   text-transform: uppercase;
-  color: #DBDCDD;
+  color: #dbdcdd;
 }
+
 @media (max-width: 767px) {
   .btn-text {
     font-family: "GothicCGNo1", sans-serif;
@@ -251,5 +250,6 @@
     font-size: 37.46px;
     letter-spacing: 0.78px;
     text-transform: uppercase;
+    line-height: normal;
   }
 }

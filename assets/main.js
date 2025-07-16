@@ -72,8 +72,21 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(console.error);
 });
+/*SHOW MORE*/
+ const btn = document.getElementById('showMoreBtn');
+  const more = document.getElementById('moreText');
+  const container = document.getElementById('textContainer');
+  const overlay = document.getElementById('fadeOverlay');
 
-/*footer slider*/
+  btn.addEventListener('click', () => {
+    more.classList.toggle('hidden');
+    overlay.classList.toggle('hidden');
+
+    container.classList.toggle('max-h-none');
+   
+    btn.textContent = more.classList.contains('hidden') ? 'PRIKAZI VIŠE' : 'PRIKAŽI MANJE';
+  });
+/*FOOTER SLIDER*/
 
 function autoSlide(sliderContainer) {
   const wrapper = sliderContainer.querySelector(".slider-wrapper");
