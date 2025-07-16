@@ -116,7 +116,7 @@
 
   right: 0;
   width: 24%;
-  height: 12%;
+  height: 15%;
   background: linear-gradient(to left, rgba(16, 24, 28, 0.9), transparent);
   z-index: 10;
 }
@@ -190,6 +190,15 @@
   right: 0;
   width: 15%;
   height: 100%;
+  background: linear-gradient(to left, rgba(16, 24, 28, 0.9), transparent);
+  z-index: 10;
+}
+.winners::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  width: 32%;
+  height: 10%;
   background: linear-gradient(to left, rgba(16, 24, 28, 0.9), transparent);
   z-index: 10;
 }
