@@ -230,3 +230,32 @@
 .authority img {
   height: 30px;
 }
+
+@font-face {
+  font-family: "GothicCGNo1";
+  src: url("/assets/fonts/gothic-cg-no1.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-gothic {
+  font-family: "GothicCGNo1", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 50px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  color: #DBDCDD;
+}
+@media (max-width: 767px) {
+  .btn-text {
+    font-family: "GothicCGNo1", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 37.46px;
+    letter-spacing: 0.78px;
+    text-transform: uppercase;
+  }
+}
