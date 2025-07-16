@@ -1,3 +1,14 @@
+  /*ACCORDION*/
+  document.querySelectorAll(".faq-button").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const content = btn.nextElementSibling;
+      content.classList.toggle("hidden");
+      // okretanje strelice
+      const arrow = btn.querySelector("img");
+      arrow.classList.toggle("rotate-90");
+    });
+  });
+
 /*COUNTER*/
 document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter")
