@@ -241,7 +241,29 @@
   text-transform: uppercase;
   color: #dbdcdd;
 }
-
+.text-collapse {
+  overflow: hidden;
+  max-height: 150px;            /* колико се приказује уколико је "скупљено" */
+  transition: max-height 0.5s ease;
+  position: relative;
+}
+.text-collapse.expanded {
+  max-height: 2000px;           /* довољно велико за сав садржај */
+}
+.fade-overlay {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3em;                  /* висина градијента */
+  background: linear-gradient(to top, rgba(16,24,28,1), transparent);
+  transition: opacity 0.5s ease;
+}
+.fade-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
 @media (max-width: 767px) {
   .btn-text {
     font-family: "GothicCGNo1", sans-serif;

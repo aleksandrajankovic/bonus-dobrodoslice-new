@@ -72,20 +72,26 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(console.error);
 });
-/*SHOW MORE*/
- const btn = document.getElementById('showMoreBtn');
-  const more = document.getElementById('moreText');
-  const container = document.getElementById('textContainer');
-  const overlay = document.getElementById('fadeOverlay');
+const btn       = document.getElementById('showMoreBtn');
+const more      = document.getElementById('moreText');
+const container = document.getElementById('textContainer');
+const overlay   = document.getElementById('fadeOverlay');
 
-  btn.addEventListener('click', () => {
-    more.classList.toggle('hidden');
-    overlay.classList.toggle('hidden');
+btn.addEventListener('click', () => {
+  // откључавамо дужи текст
+  more.classList.toggle('hidden');
 
-    container.classList.toggle('max-h-none');
-   
-    btn.textContent = more.classList.contains('hidden') ? 'PRIKAZI VIŠE' : 'PRIKAŽI MANJE';
-  });
+  // проширујемо / скупљамо контејнер
+  container.classList.toggle('expanded');
+
+  // уклањамо градијент кад је скроз отворено
+  overlay.classList.toggle('hidden');
+
+  // мењамо натпис на дугмету
+  btn.textContent = more.classList.contains('hidden')
+    ? 'PRIKAZI VIŠE'
+    : 'PRIKAŽI MANJE';
+});
 /*FOOTER SLIDER*/
 
 function autoSlide(sliderContainer) {
