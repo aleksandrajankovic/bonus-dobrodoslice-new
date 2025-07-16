@@ -12,23 +12,30 @@
 /*COUNTER*/
 document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter")
-    .then((res) => res.json())
-    .then((data) => {
-      // formatiraj broj na 4 cifre
-      const str = String(data.players || 0).padStart(4, "0");
+    .then(res => res.json())
+    .then(data => {
+      // претворимо број играча у string, без нападања на фиксну дужину
+      const digits = String(data.players || 0).split("");
 
-      // popuni mobile
-      document
-        .querySelectorAll(".akviz-counter-mobile")
-        .forEach((el, i) => (el.textContent = str[i]));
+      // помоћна функција која пуни контејнер
+      function renderCounters(containerId, cls) {
+        const container = document.getElementById(containerId);
+        container.innerHTML = ""; // очисти старе
+        digits.forEach(d => {
+          const box = document.createElement("div");
+          box.className = cls + " w-5 h-9 bg-[#D51023] text-white font-bold flex items-center justify-center rounded";
+          box.textContent = d;
+          container.appendChild(box);
+        });
+      }
 
-
-      document
-        .querySelectorAll(".akviz-counter-desk")
-        .forEach((el, i) => (el.textContent = str[i]));
+      // изаберемо desktop и mobile контенјере
+      renderCounters("akvizicijaMobileCounters", "akviz-counter-mobile");
+      renderCounters("akvizicijaDeskCounters",   "akviz-counter-desk");
     })
-    .catch((err) => console.error(err));
+    .catch(err => console.error("Greška pri učitavanju akvizicija countera:", err));
 });
+
 
 /*WINNERS SLIDER & DATA*/
 document.addEventListener("DOMContentLoaded", () => {
