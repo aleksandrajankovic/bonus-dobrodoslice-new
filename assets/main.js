@@ -14,28 +14,24 @@ document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter")
     .then(res => res.json())
     .then(data => {
-      // претворимо број играча у string, без нападања на фиксну дужину
       const digits = String(data.players || 0).split("");
 
-      // помоћна функција која пуни контејнер
       function renderCounters(containerId, cls) {
         const container = document.getElementById(containerId);
-        container.innerHTML = ""; // очисти старе
+        container.innerHTML = "";
         digits.forEach(d => {
           const box = document.createElement("div");
-          box.className = cls + " w-5 h-9 bg-[#D51023] text-white font-bold flex items-center justify-center rounded";
+          box.className = cls + " w-5 h-9 bg-[#D51023] text-white text-[29px] font-bold flex items-center justify-center rounded";
           box.textContent = d;
           container.appendChild(box);
         });
       }
 
-      // изаберемо desktop и mobile контенјере
       renderCounters("akvizicijaMobileCounters", "akviz-counter-mobile");
       renderCounters("akvizicijaDeskCounters",   "akviz-counter-desk");
     })
     .catch(err => console.error("Greška pri učitavanju akvizicija countera:", err));
 });
-
 
 /*WINNERS SLIDER & DATA*/
 document.addEventListener("DOMContentLoaded", () => {
@@ -67,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 15,
         grabCursor: true,
-        rewind: true, // ← аутоматски враћа на први slide
+        rewind: true,
         watchSlidesVisibility: true,
         breakpoints: {
           768: { slidesPerView: 4 },
