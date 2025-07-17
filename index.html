@@ -153,13 +153,13 @@
         </div>
       </header>
 
-      <div class="max-w-screen-3xl mx-auto flex items-center pt-5">
+      <div class="max-w-screen-3xl mx-auto flex justify-center items-start">
         <!-- left text & image 60% -->
-        <div class="md:w-3/5 pr-12 text-center z-1">
+        <div class="md:w-2/5 text-center z-1">
           <img
             src="./assets/images/bezRizika.png"
             alt="Start Bez Rizika"
-            class="mx-auto mb-6"
+            class="mx-auto"
           />
           <p
             class="font-blunt font-normal text-[46px] leading-none text-[#9DC32F] opacity-0 animate-slide-in delay-200"
@@ -167,9 +167,21 @@
             2 DANA IGRE BESPLATNO – 5 DANA BONUSA
           </p>
           <h1
-            class="font-blunt font-normal text-[115px] [leading-trim:none] leading-[112.78px] text-[#E79D4B] mb-6 opacity-0 animate-slide-in delay-400"
+            class="relative inline-block text-[120px] font-blunt font-normal mb-6 leading-none"
           >
-            PREUZMI 6,500 rsd
+            <!-- Donji sloj: zlatni obrub + senka -->
+            <span
+              class="absolute inset-0 bg-gradient-to-b from-[#8f6413] via-[#d9a445] to-[#fdeec9] bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] [-webkit-text-stroke:3px_#75551b]"
+            >
+              PREUZMI 6,500 rsd
+            </span>
+
+            <!-- Gornji sloj: unutrašnji gradijent (svetliji gore, tamniji dole) -->
+            <span
+              class="relative bg-gradient-to-b from-[#fdeec9] via-[#d9a445] to-[#8f6413] bg-clip-text text-transparent"
+            >
+              PREUZMI 6,500 rsd
+            </span>
           </h1>
           <div class="flex items-center justify-center mt-[56px] space-x-6">
             <!-- CTA dugme -->
@@ -221,7 +233,7 @@
         </div>
         <!-- right video 40% -->
         <div class="md:w-2/5 flex justify-center items-center z-[-1]">
-          <div class="relative overflow-hidden w-full max-w-md">
+          <div class="relative overflow-hidden w-full">
             <!-- START_akvizicija-LP-Serbian-800x800 -->
             <script
               src="https://c.bannerflow.net/a/68777c1e9cb9af29bd890e7a?did=5cf6638e8e4e100001a17710&deeplink=on&responsive=on&redirecturl="
@@ -477,10 +489,12 @@
             <button
               class="w-full text-left py-[18px] px-4 bg-[#16232A] rounded flex justify-between items-center faq-button cursor-pointer"
             >
-              <span class="text-base text-white font-medium "
+              <span class="text-base text-white font-medium"
                 >Kako funkcioniše Start bez rizika promocija?</span
               >
-              <span class="ml-2"><img src="./assets/images/arrow.png" alt="arrow" /></span>
+              <span class="ml-2"
+                ><img src="./assets/images/arrow.png" alt="arrow"
+              /></span>
             </button>
             <div class="faq-content hidden px-4 pt-2 text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -492,7 +506,9 @@
               <span class="text-base text-white font-medium"
                 >Da li moram da uplatim novac da bih dobio bonus?</span
               >
-              <span class="ml-2"><img src="./assets/images/arrow.png" alt="arrow" /></span>
+              <span class="ml-2"
+                ><img src="./assets/images/arrow.png" alt="arrow"
+              /></span>
             </button>
             <div class="faq-content hidden px-4 pt-2 text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -504,7 +520,9 @@
               <span class="text-base text-white font-medium"
                 >Koliko iznosi maksimalni bonus?</span
               >
-              <span class="ml-2"><img src="./assets/images/arrow.png" alt="arrow" /></span>
+              <span class="ml-2"
+                ><img src="./assets/images/arrow.png" alt="arrow"
+              /></span>
             </button>
             <div class="faq-content hidden px-4 pt-2 text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
@@ -516,7 +534,9 @@
               <span class="text-base text-white font-medium"
                 >Kako podižem novac ako ostvarim dobitak?</span
               >
-              <span class="ml-2"><img src="./assets/images/arrow.png" alt="arrow" /></span>
+              <span class="ml-2"
+                ><img src="./assets/images/arrow.png" alt="arrow"
+              /></span>
             </button>
             <div class="faq-content hidden px-4 pt-2 text-gray-300">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
