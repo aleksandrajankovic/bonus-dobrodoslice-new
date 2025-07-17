@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", () => {
           pauseOnMouseEnter: false,
         },
 
-        speed: 30000,
+        speed: 50000,
 
         watchSlidesVisibility: true,
         breakpoints: {
