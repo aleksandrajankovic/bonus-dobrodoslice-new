@@ -58,6 +58,9 @@
   align-items: center;
   gap: 24px;
 }
+.social-networks-icon img {
+  height: 25px;
+}
 .payments {
   display: flex;
   padding: 10px 0;
