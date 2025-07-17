@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
           0: {
             slidesPerView: 1,
             speed: 500,
-            autoplay: { delay: 2000 },
+            autoplay: { delay: 4000 },
           },
           768: {
             slidesPerView: 4,
