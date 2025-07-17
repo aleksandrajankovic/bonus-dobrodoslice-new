@@ -59,7 +59,7 @@
   gap: 24px;
 }
 .social-networks-icon img {
-  height: 25px;
+  height: 25px !important;
 }
 .payments {
   display: flex;
