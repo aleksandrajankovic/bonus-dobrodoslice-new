@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       new Swiper(".swiper-container", {
         slidesPerView: 1,
-        spaceBetween: 15,
+        spaceBetween: 70,
         grabCursor: true,
         rewind: true,
         watchSlidesVisibility: true,
