@@ -74,23 +74,10 @@
         </button>
       </div>
     </header>
-<div
-  id="stickyCta"
-  class="md:hidden fixed bottom-0 left-0 w-full bg-[#10181C] px-4 py-3 z-50"
->
-  <button
-    class="w-full group relative overflow-hidden px-8 py-3 text-[28px] font-medium uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)]"
-    style="background: linear-gradient(180deg, #99be2f 0%, #527623 100%); border: 3px solid #00c529;"
-  >
-    <div
-      class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
-      style="background: linear-gradient(to right, rgba(38,67,17,0.8), rgba(38,67,17,0));"
-    ></div>
-    <span class="relative z-10 font-gothic">KRENI ODMAH!</span>
-  </button>
-</div>
+
     <!-- MOBILE HERO -->
-    <section id="heroSection"
+    <section
+      id="heroSection"
       class="flex flex-col justify-center md:hidden relative text-center px-4 py-8 bg-cover bg-center"
       style="
         background-image: url('https://cloud.merbet.com/images/welcomeNEW-mob.jpg');
@@ -145,7 +132,7 @@
         <!-- tekst -->
         <span class="btn-text relative z-10 font-gothic"> KRENI ODMAH! </span>
       </button>
-    
+
       <div class="mt-2">
         <a
           href="#"
@@ -410,7 +397,9 @@
 
       <!-- WINNERS SECTION -->
       <section class="px-4 py-8 overflow-x-hidden">
-        <h2 class="text-center text-[32px] font-semibold mb-6 text-white leading-[1]">
+        <h2
+          class="text-center text-[32px] font-semibold mb-6 text-white leading-[1]"
+        >
           Kazino dobitnici iz minuta u minut
         </h2>
 
@@ -687,12 +676,11 @@
     </section>
 
     <!-- FOOTER -->
-    <footer>
+    <footer class="footer">
       <div class="footer-wrapper max-w-screen-2xl">
         <div class="social-networks">
           <div class="social-networks-text">
-            <h3>Društvene mreže</h3>
-            <h4>Zapratite nas</h4>
+            <h3>Zapratite nas</h3>
           </div>
           <div class="social-networks-icons">
             <a href="https://www.facebook.com/MeridianbetRS/" target="_blank">
@@ -723,8 +711,7 @@
         </div>
         <div class="payments">
           <div class="payments-text">
-            <h3>Načini plaćanja</h3>
-            <h4>Pouzdani partneri</h4>
+            <h3>Pouzdani partneri</h3>
           </div>
           <div class="payments-icons">
             <div class="slider-container">
@@ -880,8 +867,7 @@
         </div>
         <div class="sponsorships">
           <div class="sponsorships-text">
-            <h3>Sponzorstvo</h3>
-            <h4>Podržavamo sport i fer plej</h4>
+            <h3>Podržavamo sport i fer plej</h3>
           </div>
           <div class="sponsorships-icons">
             <div class="slider-container myslider1">
@@ -1038,6 +1024,30 @@
         </div>
       </div>
     </footer>
+    <div
+      id="stickyCta"
+      class="md:hidden fixed bottom-0 left-0 w-full bg-[#10181C] px-4 py-3 z-50"
+    >
+      <button
+        class="w-full group relative overflow-hidden px-8 py-3 text-[28px] font-medium uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)]"
+        style="
+          background: linear-gradient(180deg, #99be2f 0%, #527623 100%);
+          border: 3px solid #00c529;
+        "
+      >
+        <div
+          class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
+          style="
+            background: linear-gradient(
+              to right,
+              rgba(38, 67, 17, 0.8),
+              rgba(38, 67, 17, 0)
+            );
+          "
+        ></div>
+        <span class="relative z-10 font-gothic">KRENI ODMAH!</span>
+      </button>
+    </div>
     <script src="./assets/main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   </body>

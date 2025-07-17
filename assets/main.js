@@ -6,17 +6,17 @@
       (entries) => {
         entries.forEach(entry => {
           if (!entry.isIntersecting) {
-            // Kad hero izađe iz vidokruga – prikaži sticky CTA
+       
             cta.classList.remove('hidden');
           } else {
-            // Kad je hero opet vidljiv – sakrij CTA
+       
             cta.classList.add('hidden');
           }
         });
       },
       {
-        root: null,          // prati viewport
-        threshold: 0,        // čim i piksel ode van
+        root: null,       
+        threshold: 0,        
       }
     );
 
