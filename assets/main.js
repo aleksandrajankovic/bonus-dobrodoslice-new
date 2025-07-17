@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const slide = document.createElement("div");
         slide.className = "swiper-slide p-4 rounded-lg cursor-pointer";
         slide.innerHTML = `
-          <p class="text-sm">
+          <p class="text-[16px]">
             ${win.name} je osvojio/la
             <span class="text-[#54FD11]">${val}&nbsp;rsd</span>
             na igri <span class="text-[#CE5DFF]">${win.game_name || "-"}</span>
@@ -64,22 +64,28 @@ document.addEventListener("DOMContentLoaded", () => {
       });
 
       new Swiper(".swiper-container", {
-        slidesPerView: 1,
-        spaceBetween: 70,
-        grabCursor: true,
-
         loop: true,
+        slidesPerView: 5,
+        spaceBetween: 60,
+        grabCursor: true,
         autoplay: {
-          delay: 0,
+          delay: 0, // odmah vozi
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
         },
-
-        speed: 50000,
-
+        speed: 50000, // dužina jednog full‑cycle scrolla
         watchSlidesVisibility: true,
         breakpoints: {
-          768: { slidesPerView: 5 },
+          0: {
+            slidesPerView: 1,
+            speed: 500,
+            autoplay: { delay: 2000 },
+          },
+          768: {
+            slidesPerView: 4,
+            speed: 500,
+            autoplay: { delay: 2000 },
+          },
         },
       });
     })

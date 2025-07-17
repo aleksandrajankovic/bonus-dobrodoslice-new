@@ -88,16 +88,27 @@
         class="mx-auto"
       />
       <p
-        class="text-[80px] font-blunt text-[#E79D4B] font-normal leading-[1] mb-6 opacity-0 animate-slide-in delay-200"
-      >
-        PREUZMI <br />
-        6,500 rsd
-      </p>
-      <p
         class="font-blunt font-normal text-[32px] leading-none text-[#9DC32F] opacity-0 animate-slide-in delay-400"
       >
-        2 DANA IGRE BESPLATNO – 5 DANA BONUSA
+        2 DANA IGRE BESPLATNO <br />5 DANA BONUSA
       </p>
+      <p
+        class="relative inline-block text-[80px] md:text-[clamp(3rem,8vw,7.5rem)] font-blunt font-normal mb-6 whitespace-pre-line"
+      >
+        <!-- Zlatni obrub + senka -->
+        <span
+          class="absolute inset-0 bg-gradient-to-b from-[#8f6413] via-[#d9a445] to-[#fdeec9] bg-clip-text text-transparent drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] [-webkit-text-stroke:3px_#75551b]"
+        >
+          PREUZMI<br />6,500 rsd
+        </span>
+        <!-- Glavni gradient fill -->
+        <span
+          class="relative bg-gradient-to-b from-[#fdeec9] via-[#d9a445] to-[#8f6413] bg-clip-text text-transparent"
+        >
+          PREUZMI<br />6,500 rsd
+        </span>
+      </p>
+
       <button
         class="mt-6 group relative overflow-hidden px-8 py-[6px] text-[28px] font-medium uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)]"
         style="
@@ -329,10 +340,10 @@
                 alt="one"
             /></span>
             <div>
-              <h4 class="text-xl font-semibold text-white">
+              <h4 class="text-xl font-normal text-white">
                 Počinješ sa poklonom
               </h4>
-              <p class="text-base text-white">
+              <p class="text-base text-white font-bold">
                 Dobijaš 2 dana igre potpuno besplatno
               </p>
             </div>
@@ -349,10 +360,10 @@
                 alt="two"
             /></span>
             <div>
-              <h4 class="text-xl font-semibold text-white">
+              <h4 class="text-xl font-normal text-white">
                 Uplati tokom prva 2 dana
               </h4>
-              <p class="text-base text-white">Otključaj još 3 dana bonusa</p>
+              <p class="text-base text-white font-bold">Otključaj još 3 dana bonusa</p>
             </div>
           </div>
 
@@ -367,8 +378,8 @@
                 alt="three"
             /></span>
             <div>
-              <h4 class="text-xl font-semibold text-white">Igraj i osvajaj</h4>
-              <p class="text-base text-white">Bonus te prati svakog dana</p>
+              <h4 class="text-xl font-normal text-white">Igraj i osvajaj</h4>
+              <p class="text-base text-white font-bold">Bonus te prati svakog dana</p>
             </div>
           </div>
         </div>
