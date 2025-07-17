@@ -1,3 +1,30 @@
+  document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.getElementById('heroSection');
+    const cta  = document.getElementById('stickyCta');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) {
+            // Kad hero izađe iz vidokruga – prikaži sticky CTA
+            cta.classList.remove('hidden');
+          } else {
+            // Kad je hero opet vidljiv – sakrij CTA
+            cta.classList.add('hidden');
+          }
+        });
+      },
+      {
+        root: null,          // prati viewport
+        threshold: 0,        // čim i piksel ode van
+      }
+    );
+
+    observer.observe(hero);
+  });
+
+
+
 /*ACCORDION*/
 document.querySelectorAll(".faq-button").forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -133,3 +160,6 @@ function autoSlide(sliderContainer) {
 }
 const sliderContainers = document.querySelectorAll(".slider-container");
 sliderContainers.forEach(autoSlide);
+
+
+
