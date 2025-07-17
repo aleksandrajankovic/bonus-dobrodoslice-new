@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         watchSlidesVisibility: true,
         breakpoints: {
-          768: { slidesPerView: 4 },
+          768: { slidesPerView: 5 },
         },
       });
     })
