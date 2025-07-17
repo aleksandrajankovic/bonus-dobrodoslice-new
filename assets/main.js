@@ -1,36 +1,40 @@
-  /*ACCORDION*/
-  document.querySelectorAll(".faq-button").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const content = btn.nextElementSibling;
-      content.classList.toggle("hidden");
-      // okretanje strelice
-      const arrow = btn.querySelector("img");
-      arrow.classList.toggle("rotate-90");
-    });
+/*ACCORDION*/
+document.querySelectorAll(".faq-button").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const content = btn.nextElementSibling;
+    content.classList.toggle("hidden");
+    // okretanje strelice
+    const arrow = btn.querySelector("img");
+    arrow.classList.toggle("rotate-90");
   });
+});
 
 /*COUNTER*/
 document.addEventListener("DOMContentLoaded", () => {
   fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter")
-    .then(res => res.json())
-    .then(data => {
+    .then((res) => res.json())
+    .then((data) => {
       const digits = String(data.players || 0).split("");
 
       function renderCounters(containerId, cls) {
         const container = document.getElementById(containerId);
         container.innerHTML = "";
-        digits.forEach(d => {
+        digits.forEach((d) => {
           const box = document.createElement("div");
-          box.className = cls + " w-5 h-9 bg-[#D51023] text-white text-[29px] font-bold flex items-center justify-center rounded";
+          box.className =
+            cls +
+            " w-5 h-9 bg-[#D51023] text-white text-[29px] font-bold flex items-center justify-center rounded";
           box.textContent = d;
           container.appendChild(box);
         });
       }
 
       renderCounters("akvizicijaMobileCounters", "akviz-counter-mobile");
-      renderCounters("akvizicijaDeskCounters",   "akviz-counter-desk");
+      renderCounters("akvizicijaDeskCounters", "akviz-counter-desk");
     })
-    .catch(err => console.error("Greška pri učitavanju akvizicija countera:", err));
+    .catch((err) =>
+      console.error("Greška pri učitavanju akvizicija countera:", err)
+    );
 });
 
 /*WINNERS SLIDER & DATA*/
@@ -63,7 +67,16 @@ document.addEventListener("DOMContentLoaded", () => {
         slidesPerView: 1,
         spaceBetween: 70,
         grabCursor: true,
-        rewind: true,
+
+        loop: true,
+        autoplay: {
+          delay: 0,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: false,
+        },
+
+        speed: 30000,
+
         watchSlidesVisibility: true,
         breakpoints: {
           768: { slidesPerView: 4 },
@@ -72,25 +85,23 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch(console.error);
 });
-const btn       = document.getElementById('showMoreBtn');
-const more      = document.getElementById('moreText');
-const container = document.getElementById('textContainer');
-const overlay   = document.getElementById('fadeOverlay');
 
-btn.addEventListener('click', () => {
-  // откључавамо дужи текст
-  more.classList.toggle('hidden');
+/*SHOW MORE*/
+const btn = document.getElementById("showMoreBtn");
+const more = document.getElementById("moreText");
+const container = document.getElementById("textContainer");
+const overlay = document.getElementById("fadeOverlay");
 
-  // проширујемо / скупљамо контејнер
-  container.classList.toggle('expanded');
+btn.addEventListener("click", () => {
+  more.classList.toggle("hidden");
 
-  // уклањамо градијент кад је скроз отворено
-  overlay.classList.toggle('hidden');
+  container.classList.toggle("expanded");
 
-  // мењамо натпис на дугмету
-  btn.textContent = more.classList.contains('hidden')
-    ? 'PRIKAZI VIŠE'
-    : 'PRIKAŽI MANJE';
+  overlay.classList.toggle("hidden");
+
+  btn.textContent = more.classList.contains("hidden")
+    ? "PRIKAZI VIŠE"
+    : "PRIKAŽI MANJE";
 });
 /*FOOTER SLIDER*/
 
