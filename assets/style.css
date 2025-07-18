@@ -266,7 +266,9 @@
   opacity: 0;
   pointer-events: none;
 }
-
+.small-font {
+  font-size: 40px;
+}
 @media (max-width: 767px) {
   .btn-text {
     font-family: "GothicCGNo1", sans-serif;
