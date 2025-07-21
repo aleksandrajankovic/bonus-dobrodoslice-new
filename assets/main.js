@@ -96,11 +96,11 @@ document.addEventListener("DOMContentLoaded", () => {
         spaceBetween: 60,
         grabCursor: true,
         autoplay: {
-          delay: 0, // odmah vozi
+          delay: 0, 
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
         },
-        speed: 50000, // dužina jednog full‑cycle scrolla
+        speed: 50000, 
         watchSlidesVisibility: true,
         breakpoints: {
           0: {
