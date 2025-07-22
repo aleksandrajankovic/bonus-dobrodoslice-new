@@ -159,7 +159,9 @@
     <header
       class="flex items-center justify-between px-4 py-3 md:hidden absolute bg-transparent w-full z-20"
     >
-      <img src="./assets/images/logo.png" alt="mb" class="h-6" />
+      <a class="home" href="#" target="_blank">
+        <img src="./assets/images/logo.png" alt="mb" class="h-6" />
+      </a>
       <div class="flex items-center space-x-2">
         <span class="text-sm">Imaš nalog?</span>
         <a
@@ -237,7 +239,6 @@
       <div class="mt-2">
         <a
           href="#faq"
- 
           class="flex items-center justify-center space-x-2 text-sm text-gray-200 hover:text-white"
         >
           <!-- zameniti src za svoju info ikoncu -->
@@ -257,7 +258,9 @@
       <header
         class="absolute top-0 left-0 w-full px-8 py-4 flex items-center justify-between bg-transparent z-20"
       >
-        <img src="./assets/images/logo.png" alt="MeridianBet" class="h-8" />
+        <a class="home" href="#" target="_blank">
+          <img src="./assets/images/logo.png" alt="MeridianBet" class="h-8" />
+        </a>
         <div class="flex items-center space-x-2">
           <span class="text-sm text-white">Imaš nalog?</span>
           <a
@@ -334,7 +337,6 @@
             <!-- Pravila promocije sa info ikoncom -->
             <a
               href="#faq"
-            
               class="flex items-center space-x-2 text-sm text-gray-200 hover:text-white"
             >
               <!-- zameniti src za svoju info ikoncu -->
@@ -839,11 +841,12 @@
             ></div>
 
             <!-- tekst -->
-            <span class="btn-text relative z-10 font-gothic leading-[0px] p-[25px] small-font">
+            <span
+              class="btn-text relative z-10 font-gothic leading-[0px] p-[25px] small-font"
+            >
               KRENI ODMAH!
             </span>
           </a>
-     
         </section>
       </section>
     </section>
@@ -852,7 +855,6 @@
       <div
         class="relative bg-[#16232A] rounded-lg p-8 max-w-screen-2xl mx-auto border border-[#2E5465] rounded-[10px] p-[40px]"
       >
-       
         <div
           id="textContainer"
           class="relative overflow-hidden max-h-48 text-collapse"
@@ -888,7 +890,6 @@
             </span>
           </p>
 
-    
           <div
             id="fadeOverlay"
             class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#16232A] to-transparent fade-overlay"
@@ -1287,15 +1288,26 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
     <script>
-      var pathArray = document.URL.split("/");
-      var secondLevelLocation = pathArray[5];
-      var newURL =
-        "https://meridianbet.rs/sr/registracija" + secondLevelLocation;
-      var homeURL = "https://meridianbet.rs/sr/kladjenje" + secondLevelLocation;
-      console.log(newURL);
-      console.log(homeURL);
-      $(".join-now").attr("href", newURL);
-      $(".home").attr("href", homeURL);
+      document.addEventListener("DOMContentLoaded", () => {
+        const query = window.location.search || "";
+
+        const baseRegistracija = "https://meridianbet.rs/sr/registracija";
+        const baseKladjenje = "https://meridianbet.rs/sr/kladjenje";
+
+        const registracijaHref = baseRegistracija + query;
+        const kladjenjeHref = baseKladjenje + query;
+
+        document.querySelectorAll(".join-now").forEach((a) => {
+          a.setAttribute("href", registracijaHref);
+        });
+
+        document.querySelectorAll(".home").forEach((a) => {
+          a.setAttribute("href", kladjenjeHref);
+        });
+
+        console.log("join‑now", registracijaHref);
+        console.log("home ", kladjenjeHref);
+      });
     </script>
     <script src="./assets/main.js"></script>
   </body>
