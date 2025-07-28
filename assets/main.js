@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
     rounded-lg
     cursor-pointer
     bg-cover bg-center bg-no-repeat
-    bg-[url('/assets/images/swipe.png')]
+    bg-[url('./assets/images/swipe.png')]
   `;
 
   slide.innerHTML = `
