@@ -13,7 +13,9 @@
   margin: 0;
   padding: 0;
 }
-
+li::marker {
+  margin: 0px !important;
+}
 .footer-wrapper {
   margin: 0 auto;
   padding: 40px 0;
