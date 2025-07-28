@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", () => {
         right-[-2px]                
         top-[-2px]                
         bottom-[-2px]                 
-        w-[35%]                      
+        w-[40%]                      
         bg-gradient-to-l             
-        from-[rgba(16,24,28,0.9)]    
+        from-[rgba(16,24,28,1)]  
         to-transparent               
         z-20                       
         pointer-events-none        
