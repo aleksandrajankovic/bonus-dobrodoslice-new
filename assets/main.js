@@ -1,29 +1,25 @@
-  document.addEventListener('DOMContentLoaded', () => {
-    const hero = document.getElementById('heroSection');
-    const cta  = document.getElementById('stickyCta');
+document.addEventListener("DOMContentLoaded", () => {
+  const hero = document.getElementById("heroSection");
+  const cta = document.getElementById("stickyCta");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting) {
-       
-            cta.classList.remove('hidden');
-          } else {
-       
-            cta.classList.add('hidden');
-          }
-        });
-      },
-      {
-        root: null,       
-        threshold: 0,        
-      }
-    );
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          cta.classList.remove("hidden");
+        } else {
+          cta.classList.add("hidden");
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0,
+    }
+  );
 
-    observer.observe(hero);
-  });
-
-
+  observer.observe(hero);
+});
 
 /*ACCORDION*/
 document.querySelectorAll(".faq-button").forEach((btn) => {
@@ -74,33 +70,67 @@ document.addEventListener("DOMContentLoaded", () => {
       wrapper.innerHTML = "";
       data.slice(0, 20).forEach((win) => {
         const val = (win.win_value || 0).toLocaleString("en-US");
+        const verb = win.gender === "f" ? "osvojila" : "osvojio";
         const slide = document.createElement("div");
-        slide.className = "swiper-slide p-4 rounded-lg cursor-pointer";
-        slide.innerHTML = `
-          <p class="text-[16px]">
-            ${win.name} je osvojio/la
-            <span class="text-[#54FD11]">${val}&nbsp;rsd</span>
-            na igri <span class="text-[#CE5DFF]">${win.game_name || "-"}</span>
-          </p>
-          <p class="text-xs text-gray-400 mt-1 flex items-center">
-            <span class="inline-block bg-green-500 w-2 h-2 rounded-full mr-1"></span>
-           Pre ${win.time || "-"}
-          </p>
-        `;
-        wrapper.appendChild(slide);
-      });
+        slide.className = `
+    swiper-slide
+    relative               
+    border-2 border-[#8836D2]
+    flex-none
+    w-[240px] md:w-[400px] lg:w-[500px]
+    p-4
+    rounded-lg
+    cursor-pointer
+    bg-cover bg-center bg-no-repeat
+    bg-[url('/assets/images/swipe.png')]
+  `;
+
+  slide.innerHTML = `
+  
+    <div
+      class="
+       absolute inset-y-0           
+        right-[-2px]                
+        top-[-2px]                
+        bottom-[-2px]                 
+        w-[35%]                      
+        bg-gradient-to-l             
+        from-[rgba(16,24,28,0.9)]    
+        to-transparent               
+        z-20                       
+        pointer-events-none        
+        rounded-r-lg                          
+      "
+    ></div>
+
+    <p class="text-[13px] text-gray-400">
+      <span class="semibold text-white">${win.name}</span>
+      je ${verb}<br>
+      <span
+        class="
+          font-condensed text-[40px]
+          bg-[linear-gradient(180deg,#C380FF_0%,#8836D2_100%)]
+          bg-clip-text text-transparent font-black
+        "
+      >${val}&nbsp;RSD</span><br>
+      na <span class="text-white text-[14px] capitalize">${win.game_name || "-"}</span>
+    </p>
+  `;
+
+  wrapper.appendChild(slide);
+});
 
       new Swiper(".swiper-container", {
         loop: true,
         slidesPerView: 5,
-        spaceBetween: 60,
+        spaceBetween: 10,
         grabCursor: true,
         autoplay: {
-          delay: 0, 
+          delay: 0,
           disableOnInteraction: false,
           pauseOnMouseEnter: false,
         },
-        speed: 50000, 
+        speed: 50000,
         watchSlidesVisibility: true,
         breakpoints: {
           0: {
@@ -108,10 +138,20 @@ document.addEventListener("DOMContentLoaded", () => {
             speed: 500,
             autoplay: { delay: 4000 },
           },
-          768: {
+          640: {
+            slidesPerView: 2,
+            speed: 500,
+            autoplay: { delay: 4000 },
+          },
+          840: {
+            slidesPerView: 3,
+            speed: 500,
+            autoplay: { delay: 4000 },
+          },
+         1366: {
             slidesPerView: 4,
             speed: 500,
-            autoplay: { delay: 2000 },
+            autoplay: { delay: 4000 },
           },
         },
       });
@@ -160,6 +200,3 @@ function autoSlide(sliderContainer) {
 }
 const sliderContainers = document.querySelectorAll(".slider-container");
 sliderContainers.forEach(autoSlide);
-
-
-
