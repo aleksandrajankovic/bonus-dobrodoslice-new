@@ -34,7 +34,7 @@ document.querySelectorAll(".faq-button").forEach((btn) => {
 
 /*COUNTER*/
 document.addEventListener("DOMContentLoaded", () => {
-  fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter")
+  fetch("https://smartdog.meridianbet.com/feeds/akvizicija_counter_RS")
     .then((res) => res.json())
     .then((data) => {
       const digits = String(data.players || 0).split("");
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("DOMContentLoaded", () => {
   const wrapper = document.getElementById("winnersGrid");
 
-  fetch("https://smartdog.meridianbet.com/feeds/top_wins")
+  fetch("https://smartdog.meridianbet.com/feeds/top_wins_RS")
     .then((r) => r.json())
     .then((data) => {
       wrapper.innerHTML = "";

@@ -1,33 +1,27 @@
 <!DOCTYPE html>
 <html lang="sr">
   <head>
+    <!-- Google Tag Manager -->
     <script>
-      (function (i, s, o, g, r, a, m) {
-        i["GoogleAnalyticsObject"] = r;
-        (i[r] =
-          i[r] ||
-          function () {
-            (i[r].q = i[r].q || []).push(arguments);
-          }),
-          (i[r].l = 1 * new Date());
-        (a = s.createElement(o)), (m = s.getElementsByTagName(o)[0]);
-        a.async = 1;
-        a.src = g;
-        m.parentNode.insertBefore(a, m);
-      })(
-        window,
-        document,
-        "script",
-        "https://www.google-analytics.com/analytics.js",
-        "ga"
-      );
-      ga("create", "UA-29664021-5", "auto");
-      ga("send", "pageview");
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WQMNTGB");
     </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Start bez rizika | MeridianBet</title>
-    <meta name="title" content="Start bez rizika | MeridianBet" />
+    <title>Bonus Dobrodošlice | Start bez Rizika | Meridianbet</title>
+    <meta
+      name="title"
+      content="Bonus Dobrodošlice | Start bez Rizika | Meridianbet"
+    />
     <meta
       name="description"
       content="Meridian je spremio svim igračima fantastičan bonus dobrodošlice za kladionicu i kazino. Registrujte se već danas i i osvojite velike nagrade."
@@ -49,24 +43,6 @@
       rel="stylesheet"
     />
 
-    <script>
-      (function (w, d, s, l, i) {
-        w[l] = w[l] || [];
-        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-        var f = d.getElementsByTagName(s)[0],
-          j = d.createElement(s),
-          dl = l != "dataLayer" ? "&l=" + l : "";
-        j.async = true;
-        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-        f.parentNode.insertBefore(j, f);
-      })(window, document, "script", "dataLayer", "GTM-K4QFNR");
-    </script>
-
-    <script
-      async
-      src="https://www.google-analytics.com/analytics.js"
-      type="093180e956b4f70342022493-"
-    ></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/swiper/swiper-bundle.min.css"
@@ -90,6 +66,13 @@
         font-family: "GothicCGNo1";
         src: url("./assets/fonts/gothic-cg-no1.otf") format("opentype");
         font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+       @font-face {
+        font-family: "Haettenschweiler";
+        src: url("./assets/fonts/HATTEN.TTF") format("opentype");
+        font-weight: 900;
         font-style: normal;
         font-display: swap;
       }
@@ -144,15 +127,19 @@
       .delay-400 {
         animation-delay: 0.4s;
       }
+      .font-haettenschweiler {
+        font-family: "Haettenschweiler";
+        font-weight: 400;
+      }
     </style>
     <!-- Tailwind via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="overflow-x-hidden text-white font-roboto bg-[#10181C]">
+  <body class="overflow-x-hidden text-white font-roboto bg-[#000000]">
     <!-- Google Tag Manager (noscript) -->
     <noscript
       ><iframe
-        src="https://www.googletagmanager.com/ns.html?id=GTM-K4QFNR"
+        src="https://www.googletagmanager.com/ns.html?id=GTM-WQMNTGB"
         height="0"
         width="0"
         style="display: none; visibility: hidden"
@@ -181,34 +168,45 @@
     <!-- MOBILE HERO -->
     <section
       id="heroSection"
-      class="flex flex-col justify-center md:hidden relative text-center px-4 py-8 bg-cover bg-center"
+      class="flex flex-col justify-center md:hidden relative text-center px-4 py-8 bg-cover bg-center min-h-screen
+"
       style="
-        background-image: url('https://cloud.merbet.com/images/welcomeNEW-mob.jpg');
+        background-image: url('./assets/images/mobile_background.jpg');
       "
     >
       <img
-        src="./assets/images/bezRizika.png"
+        src="./assets/images/6500.png"
         alt="Start Bez Rizika"
-        class="mx-auto"
+        class="mx-auto bounce"
       />
-      <p
-        class="font-blunt font-normal text-[32px] leading-none text-[#9DC32F] opacity-0 animate-slide-in delay-400 mt-[-25px]"
+      <p style=" background: -webkit-linear-gradient(90deg, #a1a1a1, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;"
+        class="font-blunt font-normal text-[42px] leading-none opacity-0 animate-slide-in delay-400 mb-4"
       >
-        2 DANA IGRE BESPLATNO <br />5 DANA BONUSA
+        2 DANA IGRE POTPUNO BESPLATNO
       </p>
-      <p
-        class="relative inline-block text-[80px] md:text-[clamp(3rem,8vw,7.5rem)] font-blunt font-normal mb-6 leading-[1] animate-slide-in delay-400"
-      >
-  
+    
         <!-- Glavni gradient fill -->
-        <span
-          class="relative bg-gradient-to-b from-[#fdeec9] via-[#d9a445] to-[#8f6413] bg-clip-text text-transparent"
-        >
-          PREUZMI<br />6,500 rsd
-        </span>
-      </p>
-
-      <a
+       <p
+              class="not-italic font-medium text-[1.2rem]
+                    text-white leading-normal;"
+              
+              >
+                🎁 Poklon tiketi i spinovi, bez ikakvih uslova!<br />
+                🔥 Produži zabavu – uplati samo 500 RSD i otključaj još 3 dana
+                bonusa!<br />
+                🎫 Tiketi do 1.000 RSD dnevno + dodatni spinovi<br />🚀 Prve
+                pobede su na tvojoj strani – u Meridianu igraš pametno od
+                starta!
+              </p>
+      
+ <!-- CTA dugme -->
+               <a href="#"
+                target="_blank"
+                class="join-now flex justify-center">
+              <img style="height: 120px;" src="./assets/images/cta.png" alt="cta"></a>
+      <!-- <a
         href="#"
         target="_blank"
         class="join-now bounce mx-auto w-[240px] mt-6 group relative overflow-hidden px-8 py-[6px] text-[28px] font-medium uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)] flex items-center justify-center"
@@ -216,9 +214,9 @@
           background: linear-gradient(180deg, #99be2f 0%, #527623 100%);
           border: 3px solid #00c529;
         "
-      >
+      > -->
         <!-- overlay prelaz -->
-        <div
+        <!-- <div
           class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
           style="
             background: linear-gradient(
@@ -227,13 +225,13 @@
               rgba(38, 67, 17, 0)
             );
           "
-        ></div>
+        ></div> -->
 
         <!-- tekst -->
-        <span class="btn-text relative z-10 font-gothic p-[25px] leading-[0px]">
+        <!-- <span class="btn-text relative z-10 font-gothic p-[25px] leading-[0px]">
           KRENI ODMAH!
-        </span>
-      </a>
+        </span> 
+      </a>-->
 
       <div class="mt-2">
         <a
@@ -245,120 +243,136 @@
           <span>Pravila promocije</span>
         </a>
       </div>
-      <div class="mt-4 flex justify-center">
+      <!-- <div class="mt-4 flex justify-center">
         <div id="akvizicijaMobileCounters" class="flex space-x-1"></div>
       </div>
-      <p class="mt-2 text-xs">igrača je već startovalo bez rizika!</p>
+      <p class="mt-2 text-xs">igrača je već startovalo bez rizika!</p> -->
     </section>
 
     <!-- DESKTOP HERO WITH TRANSPARENT HEADER -->
-    <section class="hidden md:block relative px-8 py-12 bg-cover bg-center">
-      <!-- transparent header -->
-      <header
-        class="absolute top-0 left-0 w-full px-8 py-4 flex items-center justify-between bg-transparent z-20"
-      >
-        <a class="home" href="#" target="_blank">
-          <img src="./assets/images/logo.png" alt="MeridianBet" class="h-8" />
-        </a>
-        <div class="flex items-center space-x-2">
-          <span class="text-sm text-white">Imaš nalog?</span>
-          <a
-            href="#"
-            target="_blank"
-            class="home bg-[#FACC01] text-[#2D2D2D] font-semibold text-sm p-[10px] rounded"
-          >
-            ULOGUJ SE
+    <section
+      class="hidden md:block relative px-8 py-12 bg-cover bg-center overflow-hidden min-h-screen"
+    >
+      <!-- Bannerflow kao POZADINA -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <script
+          src="https://c.bannerflow.net/a/68da81797fe85320ce6cbd2a?did=5cf6638e8e4e100001a17710&deeplink=on&responsive=on&redirecturl="
+          async
+        ></script>
+      </div>
+
+      <!-- SVE IZNAD POZADINE -->
+      <div class="relative z-20">
+        <!-- transparent header -->
+        <header
+          class="absolute top-0 left-0 w-full px-8 py-4 flex items-center justify-between bg-transparent z-30"
+        >
+          <a class="home" href="#" target="_blank">
+            <img src="./assets/images/logo.png" alt="MeridianBet" class="h-8" />
           </a>
-        </div>
-      </header>
-
-      <div class="max-w-screen-3xl mx-auto flex justify-center items-center">
-        <!-- left text & image 60% -->
-        <div class="md:w-3/5 text-center z-1 mt-[-30px]">
-          <img
-            src="./assets/images/bezRizika.png"
-            alt="Start Bez Rizika"
-            class="mx-auto"
-          />
-          <p
-            class="font-blunt font-normal leading-none text-[#9DC32F] whitespace-nowrap text-[clamp(1.5rem,4vw,2.875rem)] opacity-0 animate-slide-in delay-200 mt-[-30px]"
-          >
-            2 DANA IGRE BESPLATNO – 5 DANA BONUSA
-          </p>
-          <h1
-            class="relative inline-block font-blunt font-normal mb-6 leading-none whitespace-nowrap text-[clamp(3rem,8vw,7.5rem)] animate-slide-in delay-200"
-          >
-        
-
-            <!-- Gornji sloj: unutrašnji gradijent (svetliji gore, tamniji dole) -->
-            <span
-              class="relative bg-gradient-to-b from-[#fdeec9] via-[#d9a445] to-[#8f6413] bg-clip-text text-transparent"
-            >
-              PREUZMI 6,500 rsd
-            </span>
-          </h1>
-          <div class="flex items-center justify-center mt-[36px] space-x-6">
-            <!-- CTA dugme -->
+          <div class="flex items-center space-x-2">
+            <span class="text-sm text-white">Imaš nalog?</span>
             <a
               href="#"
               target="_blank"
-              class="join-now group bounce relative overflow-hidden px-8 py-3 flex items-center justify-center text-center uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)]"
-              style="
-                background: linear-gradient(180deg, #99be2f 0%, #527623 100%);
-                border: 3px solid #00c529;
-              "
+              class="home bg-[#FACC01] text-[#2D2D2D] font-semibold text-sm p-[10px] rounded"
             >
-              <!-- overlay prelaz -->
-              <div
-                class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
-                style="
-                  background: linear-gradient(
-                    to right,
-                    rgba(38, 67, 17, 0.8),
-                    rgba(38, 67, 17, 0)
-                  );
-                "
-              ></div>
-
-              <!-- tekst -->
-              <span
-                class="relative z-10 font-gothic text-[clamp(1.5rem,4vw,2.875rem)] leading-none"
-              >
-                KRENI ODMAH!
-              </span>
-            </a>
-
-            <!-- Pravila promocije sa info ikoncom -->
-            <a
-              href="#faq"
-              class="flex items-center space-x-2 text-sm text-gray-200 hover:text-white"
-            >
-              <!-- zameniti src za svoju info ikoncu -->
-              <img
-                src="./assets/images/info-icon.svg"
-                alt="info"
-                class="h-5 w-5"
-              />
-              <span>Pravila promocije</span>
+              ULOGUJ SE
             </a>
           </div>
+        </header>
 
-          <!-- Brojači i tekst ispod hero dugmeta -->
-          <div class="mt-4 flex items-center justify-center space-x-4">
-            <div id="akvizicijaDeskCounters" class="flex space-x-1"></div>
-            <p class="text-sm text-white font-medium">
-              igrača je već preuzelo bonus!
+        <div class="max-w-screen-3xl mx-auto flex justify-center items-center">
+          <!-- left text & image 60% -->
+          <div class="md:w-3/5 text-center z-20 relative">
+            <img
+              src="./assets/images/6500.png"
+              alt="Start Bez Rizika"
+              class="mx-auto bounce duration-500 ease-in-out height-[300px]"
+            />
+
+            <p style=" background: -webkit-linear-gradient(90deg, #a1a1a1, #fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;"
+              class="font-blunt font-normal leading-none text-[#f2f2f2] whitespace-nowrap text-[clamp(1.5rem,4vw,2.875rem)] opacity-0 animate-slide-in delay-200 mt-[-30px]"
+            >
+              2 DANA IGRE POTPUNO BESPLATNO
             </p>
+
+            <h1
+              class="relative inline-block font-roboto font-normal mt-6 mb-6 leading-none whitespace-nowrap animate-slide-in delay-200"
+            >
+              <p
+              class="not-italic font-medium text-[1.2rem]
+                    text-white leading-normal;"
+              
+              >
+                🎁 Poklon tiketi i spinovi, bez ikakvih uslova!<br />
+                🔥 Produži zabavu – uplati samo 500 RSD i otključaj još 3 dana
+                bonusa!<br />
+                🎫 Tiketi do 1.000 RSD dnevno + dodatni spinovi<br />🚀 Prve
+                pobede su na tvojoj strani – u Meridianu igraš pametno od
+                starta!
+              </p>
+            </h1>
+
+            <div class="flex items-center justify-center mt-[36px] space-x-6">
+              <!-- CTA dugme -->
+               <a href="#"
+                target="_blank"
+                class="join-now ">
+              <img style="height: 120px;" src="./assets/images/cta.png" alt="cta"></a>
+              <!-- <a
+                href="#"
+                target="_blank"
+                class="join-now group bounce relative overflow-hidden px-8 py-3 flex items-center justify-center text-center uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)]"
+                style="
+                  background: linear-gradient(180deg, #99be2f 0%, #527623 100%);
+                  border: 3px solid #00c529;
+                "
+              >
+                <div
+                  class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
+                  style="
+                    background: linear-gradient(
+                      to right,
+                      rgba(38, 67, 17, 0.8),
+                      rgba(38, 67, 17, 0)
+                    );
+                  "
+                ></div>
+                <span
+                  class="relative z-10 font-gothic text-[clamp(1.5rem,4vw,2.875rem)] leading-none"
+                >
+                  KRENI ODMAH!
+                </span>
+              </a> -->
+
+              <!-- Pravila promocije -->
+              <a
+                href="#faq"
+                class="flex items-center space-x-2 text-sm text-gray-200 hover:text-white relative z-20"
+              >
+                <img
+                  src="./assets/images/info-icon.svg"
+                  alt="info"
+                  class="h-5 w-5"
+                />
+                <span>Pravila promocije</span>
+              </a>
+            </div>
+
+            <div class="mt-4 flex items-center justify-center space-x-4">
+              <!-- <div id="akvizicijaDeskCounters" class="flex space-x-1"></div>
+              <p class="text-sm text-white font-medium">
+                igrača je već preuzelo bonus!
+              </p> -->
+            </div>
           </div>
-        </div>
-        <!-- right video 40% -->
-        <div class="md:w-2/5 flex justify-center items-center z-[-1]">
-          <div class="relative overflow-hidden w-full">
-            <!-- START_akvizicija-LP-Serbian-800x800 -->
-            <script
-              src="https://c.bannerflow.net/a/68777c1e9cb9af29bd890e7a?did=5cf6638e8e4e100001a17710&deeplink=on&responsive=on&redirecturl="
-              async
-            ></script>
+
+          <!-- right video 40% (po želji iza svega) -->
+          <div class="md:w-2/5 flex justify-center items-center z-10">
+            <div class="relative overflow-hidden w-full"></div>
           </div>
         </div>
       </div>
@@ -366,7 +380,7 @@
 
     <!-- 3 STEPS -->
     <section
-      style="
+      /*style="
         background: linear-gradient(
             180deg,
             rgba(16, 24, 28, 0.5) 12.83%,
@@ -375,7 +389,7 @@
             #10181c 100%
           ),
           linear-gradient(263.08deg, rgba(16, 24, 28, 0) 33.82%, #10181c 45.83%);
-      "
+      "*/
     >
       <section class="px-4 py-8 hidden md:block">
         <div
@@ -501,22 +515,20 @@
       </section>
 
       <!-- WINNERS SECTION -->
-      <section class="px-4 py-8 overflow-x-hidden">
+      <!-- <section class="px-4 py-8 overflow-x-hidden">
         <h2
           class="text-center text-[32px] font-semibold mb-6 text-white leading-[1]"
         >
           Novi igrači - Velike kazino pobede
         </h2>
 
-        <!-- Swiper container -->
+     -
         <div class="winners">
           <div class="swiper-container max-w-screen-xl mx-auto overflow-hidden">
-            <div class="swiper-wrapper" id="winnersGrid">
-         
-            </div>
+            <div class="swiper-wrapper" id="winnersGrid"></div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!-- WHY US -->
       <section class="px-3 py-7">
@@ -557,7 +569,7 @@
               MERIDIAN MISIJE
             </h3>
             <p class="text-sm text-[#BDBDBD]">
-              Zarađuj poene, otključavaj levele i osvajaj ekskluzivne bonuse
+              Zarađuj poene, otključavaj nivoe i osvajaj ekskluzivne bonuse
               svakog dana!
             </p>
           </div>
@@ -601,13 +613,13 @@
 
       <!-- FAQ -->
       <section
-        style="
+      /*style="
           background: linear-gradient(
             176.65deg,
             rgba(16, 24, 28, 0) 36.23%,
             #1c2f38 97.74%
           );
-        "
+        " */
       >
         <section class="px-4 py-8 bg-[transparent]">
           <h2 class="text-center text-[32px] font-semibold mb-6">
@@ -747,11 +759,15 @@
               <p class="mb-6">
                 Detaljno objašnjenje kako da verifikuješ svoj nalog možeš
                 pronaći
-                <a  class="text-[#17bb00] underline" href="https://pomoc.meridianbet.rs/sr/category/524/page/1665"
+                <a
+                  class="text-[#17bb00] underline"
+                  href="https://pomoc.meridianbet.rs/sr/category/524/page/1665"
                   >OVDE.</a
                 >
               </p>
-              <h3 class="font-lg font-semibold uppercase text-[#17bb00] mb-2">Želiš još 3 dana besplatne igre?</h3>
+              <h3 class="font-lg font-semibold uppercase text-[#17bb00] mb-2">
+                Želiš još 3 dana besplatne igre?
+              </h3>
               <ul class="list-disc list-inside mb-4">
                 <li>Uplati minimum 500 RSD i nastavi da igraš BESPLATNO!</li>
                 <li>
@@ -788,7 +804,9 @@
                 <li>25 spinova na igrama: Super Lucky, Wild Shot</li>
               </ul>
 
-              <h3 class="font-lg font-semibold mb-2 text-[#17bb00]">PRAVILA KORIŠĆENJA BONUSA:</h3>
+              <h3 class="font-lg font-semibold mb-2 text-[#17bb00]">
+                PRAVILA KORIŠĆENJA BONUSA:
+              </h3>
               <p class="font-normal">Poklon tiket (500 RSD):</p>
               <ul class="list-disc list-inside mb-4">
                 <li>Min. 4 para po tiketu</li>
@@ -822,13 +840,7 @@
                   igrama)
                 </li>
               </ul>
-              <p class="font-normal">Promocija traje od 01.07.2025.</p>
-              <ul class="list-disc list-inside mb-4">
-                <li>
-                  Meridian zadržava pravo izmene i prekida promocije bez
-                  prethodne najave.
-                </li>
-              </ul>
+
               <p class="text-xs text-gray-400">
                 * Promocija važi od 01.07.2015.<br />
                 * Verifikacija mora biti izvršena preko aplikacije
@@ -851,7 +863,7 @@
           <a
             href="#"
             target="_blank"
-            class="bounce flex join-now mx-auto w-[240px] mt-6 group relative overflow-hidden px-8 py-[6px] text-[28px] font-medium uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)] items-center justify-center"
+            class="bounce flex join-now mx-auto md:w-[240px] w-[220px] mt-6 group relative overflow-hidden px-8 md:py-[15px] py-[10px] text-[28px] font-medium uppercase font-roboto text-white rounded-[16px] transition duration-300 ease-out hover:scale-105 hover:shadow-[0_0_30px_rgba(23,187,0,0.8)] items-center justify-center"
             style="
               background: linear-gradient(180deg, #99be2f 0%, #527623 100%);
               border: 3px solid #00c529;
@@ -860,19 +872,17 @@
             <!-- overlay prelaz -->
             <div
               class="absolute inset-0 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-in-out"
-              style="
+              /*style="
                 background: linear-gradient(
                   to right,
                   rgba(38, 67, 17, 0.8),
                   rgba(38, 67, 17, 0)
                 );
-              "
+              "*/
             ></div>
 
             <!-- tekst -->
-            <span
-              class="btn-text relative z-10 font-gothic leading-[0px] p-[25px] small-font"
-            >
+            <span class="btn-text relative z-10 font-gothic small-font">
               KRENI ODMAH!
             </span>
           </a>
@@ -880,48 +890,212 @@
       </section>
     </section>
     <!-- DISCLAIMER / INFO SECTION (desktop only) -->
-    <section class="hidden bg-[#16232A] px-8 py-10">
+    <section class="bg-[#000] px-8 py-10">
       <div
-        class="relative bg-[#16232A] rounded-lg p-8 max-w-screen-2xl mx-auto border border-[#2E5465] rounded-[10px] p-[40px]"
+        class="relative bg-[#000] rounded-lg md:p-8 max-w-screen-2xl mx-auto border border-[#2E5465] rounded-[10px] p-4 md:p-[40px]"
       >
         <div
           id="textContainer"
           class="relative overflow-hidden max-h-48 text-collapse"
         >
-          <h3 class="text-center text-lg font-semibold text-white mb-6">
-            Klađenje u sportskoj kladionici Meridian – Kvote i najbolje
-            pogodnosti
+          <h3 class="text-center text-3xl font-semibold text-white mb-6">
+            Bonus dobrodošlice
           </h3>
 
           <p class="text-sm text-gray-300 leading-relaxed mb-6">
-            Sportsko klađenje je prisutno u čovečanstvu hiljadama godina. Teško
-            je reći kada se prvi put pojavilo, ali poznato je da su se ljudi već
-            kladili na ishod određenih događaja. U antičkom Rimu se uoči
-            Koloseuma kladilo na ishode gladijatorskih borbi, broja golova ili
-            sličnih aktivnosti što znači da je sportsko klađenje veoma slično
-            današnjem po načinu i svrsi. Potrebe ljudi da se klade koincidira su
-            sa razvojem novca i sredstava razmene, pa je zato sportsko klađenje
-            postojalo dok postoje i ljudi.
-            <br /><br />
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.
+            <strong>Bonus dobrodošlice</strong> postao je sastavni deo svake
+            online kladionice. U digitalnom svetu sve vi&scaron;e zastupljenog
+            klađenja i spinovanja, ovakav bonus postao je redovan zato
+            &scaron;to novim korisnicima daje određene pogodnosti na samom
+            startu i to sa ciljem da igrač odmah oseti koliko je uvažen i
+            dobrodo&scaron;ao kao novi član jedne velike zajednice. <br /><br />
+            U nastavku saznajte &scaron;ta je
+            <strong>bonus dobrodo&scaron;lice</strong>, &scaron;ta je
+            <strong>bonus bez depozita</strong>,
+            <strong>kako se registrovati i uzeti bonus bez depozita</strong> i
+            slično.
             <span id="moreText" class="hidden">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
+              <h2 class="text-center text-2xl font-semibold text-white mb-6">
+                <strong
+                  >&Scaron;ta je bonus dobrodo&scaron;lice i kako
+                  funkcioni&scaron;e?</strong
+                >
+              </h2>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                <strong>Bonus bez depozita</strong> je usko povezan sa bonusem
+                dobrodo&scaron;lice. Jedina razlika između ova sva bonusa je u
+                tome &scaron;to se prilikom registracije bonus bez depozita
+                <strong>aktivira odmah</strong>, dakle, nije potrebno uplaćivati
+                sredstva na svoj nalog.
+              </p>
+              <h3 class="text-center text-2xl font-semibold text-white mb-6">
+                <strong
+                  >Uslovi kori&scaron;ćenja bonusa bez depozita&nbsp;</strong
+                >
+              </h3>
+              <p class="text-sm text-gray-300 leading-relaxed mb-2">
+                Postoje jasno određeni uslovi kori&scaron;ćenja
+                <strong>bonusa dobrodo&scaron;lice bez depozita</strong>, tako
+                da obavezno pročitajte uslove kori&scaron;ćenja, koji su uvek
+                istaknuti. Evo samo nekih uslova:
+              </p>
+              <ul class="text-sm text-gray-300 leading-relaxed mb-2">
+                <li class="md:leading-[12px] leading-[20px]">
+                  <strong>Obrt (wagering)</strong>: Bonus obično morate
+                  "obrnuti" određeni broj puta pre nego &scaron;to ćete moći da
+                  povučete novac (npr. 5x na kvotu 1.50).<br /><br />
+                </li>
+                <li class="md:leading-[12px] leading-[20px]">
+                  <strong>Rok važenja</strong>: Bonus ima ograničen rok trajanja
+                  (npr. 7 dana od aktivacije).<br /><br />
+                </li>
+                <li class="md:leading-[12px] leading-[20px]">
+                  <strong>Minimalna kvota</strong>: Ako igra&scaron; sportske
+                  tikete, često postoji minimalna kvota po opkladi.<br /><br />
+                </li>
+                <li class="md:leading-[12px] leading-[20px]">
+                  <strong>Ograničenja po trži&scaron;tima</strong>: Neke igre,
+                  sportovi ili tiketi ne važe za ispunjenje uslova bonusa.<br /><br />
+                </li>
+                <li class="md:leading-[12px] leading-[20px]">
+                  <strong>Jedinstven korisnik</strong>: Samo jedan bonus po
+                  osobi/adresi/IP-u.
+                </li>
+              </ul>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                Dakle, iako je u pitanju bonus bez depozita, postoje određeni
+                uslovi za igranje i preuzimanje nagrada, a da li postoji bonus
+                bez ikakvih uslova?
+              </p>
+              <h2 class="text-center text-2xl font-semibold text-white mb-6">
+                <strong
+                  >Bonus dobrodo&scaron;lice bez uslova i da li zaista
+                  postoji?&nbsp;</strong
+                >
+              </h2>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                <strong>Bonus dobrodo&scaron;lice bez uslova</strong> je veoma
+                retka ili gotovo <em>nepostojeća vrsta bonusa </em>u online
+                kladionicama, uključujući i one koje posluju u Srbiji.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                To je bonus koji igrač dobije prilikom registracije ili prve
+                uplate,
+                <strong
+                  >bez ikakvih uslova za obrtnu igru, minimalnu kvotu ili
+                  vremensko ograničenje</strong
+                >
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                U praksi ovakav tip bonusa <strong>nije standardan</strong> u
+                industriji klađenja jer kladionice time preuzimaju preveliki
+                rizik i većina njih zaobilazi ovakvu vrstu bonusa kao deo svoje
+                ponude.
+              </p>
+              <h2 class="text-center text-2xl font-semibold text-white mb-6">
+                <strong>Registrujte se i uzmite bonus bez depozita</strong>
+              </h2>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Hajde da se ostavimo bonusa koji postoje samo u teoriji i da se
+                vratimo na one koji su zaista deo ponude, &scaron;to je slučaj
+                upravo sa
+                <strong>bez depozita bonusom</strong>, kada je u pitanju
+                <strong>Meridianbet online kladionica</strong>.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Svoju <strong>promo ponudu</strong> stalno menjamo,
+                nadograđujemo i svaki put sve bolje uslove dajemo za svoje nove
+                korisnike, zato nije ni čudo &scaron;to svi igrači koji dođu kod
+                nas tu i ostaju.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Ukoliko ste novi korisnik,
+                <a
+                  class="text-[#17BB00] hover:text-[#139900] hover:underline transition-all duration-300"
+                  href="https://meridianbet.rs/sr/registracija"
+                  ><strong>registrujte se</strong></a
+                >, uputite se u sve uslove kori&scaron;ćenja bonusa bez
+                depozita, zgrabite ga i iskoristite za tikete ili igre po
+                va&scaron;oj meri.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Isprobajte
+                <a
+                  class="text-[#17BB00] hover:text-[#139900] hover:underline transition-all duration-300"
+                  href="https://meridianbet.rs/sr/kladjenje/uzivo"
+                  ><strong>kladjenje uživo</strong></a
+                >, brzo procenite igru na terenu, predvidite preostali tok meča
+                i iskoristite sjajne kvote za igre na koje želite da se kladite.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Da bi va&scaron;i tiketi bili uspe&scaron;ni,
+                <a
+                  class="text-[#17BB00] hover:text-[#139900] hover:underline transition-all duration-300]"
+                  href="https://meridianbet.rs/sr/rezultati-uzivo"
+                  ><strong>rezultati uživo</strong></a
+                >
+                mogu biti korisni jer pomažu da pratite uživo mečeve, budete
+                uvek u toku i spremni da brzo odreagujete, sastavite dobar tiket
+                i sačekate isplatu.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                Svi resursi za dobru zabavu kod nas su zagarantovani. Potrebno
+                vam je samo lepo raspoloženje i dobra procena utakmica, kako
+                biste uživali u velikim zaradama i prijatnom boravku na
+                najboljoj online platformi za klađenje i igranje najrazličitijih
+                igara.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                U nastavku pogledajte i &scaron;ta su freebet ponude i čemu one
+                služe.
+              </p>
+              <h2 class="text-center text-2xl font-semibold text-white mb-6">
+                <strong
+                  >Freebet ponude i kako ih iskoristiti na najbolji
+                  način?</strong
+                >
+              </h2>
+              <p class="text-sm text-gray-300 leading-relaxed">
+                <strong>Freebet (besplatna opklada)</strong> je iznos koji
+                kladionica dodeljuje igračima i koji se može iskoristiti za
+                postavljanje opklade bez tro&scaron;enja stvarnog novca. Iako ne
+                možete odmah podići Freebet kao ke&scaron;, možete zadržati
+                <strong>dobitak ostvaren kori&scaron;ćenjem Freebeta</strong>,
+                ali bez iznosa same opklade.
+              </p>
+              <p class="text-sm text-gray-300 leading-relaxed mb-6">
+                <strong>Freebet</strong> najbolje možete iskoristiti ako birate
+                veće kvote (između 2.00 i 4.00) i kombinujete ih na osnovu
+                dublje analize forme i učinka timova igrača koju ćete uraditi na
+                osnovu podataka koje vam nudi
+                <a
+                  class="text-[#17BB00] hover:text-[#139900] hover:underline transition-all duration-300"
+                  href="https://meridianbet.rs/sr/statistika"
+                  ><strong>sportska statistika</strong></a
+                >. Ili možete igrati single tikete, a uz dobru analizu, oni uvek
+                mogu doneti lepe svote novca.
+              </p>
+              <h2 class="text-center text-2xl font-semibold text-white mb-6">
+                <strong>Najbolje ponude za bonus bez depozita u Srbiji</strong>
+              </h2>
+              <p class="text-sm text-gray-300 leading-relaxed mb-2">
+                Najbolje ponude za<strong> bonus bez depozita u Srbiji </strong
+                >mogu se prepoznati po tome koliko su dostupne, fer u svojim
+                uslovima i usmerene na zabavu i potencijalnu zaradu korisnika.
+                Meridianbet online kladionica se ističe upravo po ovom osnovu,
+                pružajući redovno osveženu i konkurentnu
+                <strong>promo ponudu</strong>,
+                <strong>bonus dobrodo&scaron;lice</strong> i
+                <strong>bonus bez depozita</strong>, kao i dodatne promocije
+                poput <strong>freebet opcija</strong> i
+                <strong>bonusa za kazino igre</strong>.
+              </p>
             </span>
           </p>
 
           <div
             id="fadeOverlay"
-            class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#16232A] to-transparent fade-overlay"
+            class="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#000] to-transparent fade-overlay"
           ></div>
         </div>
 
